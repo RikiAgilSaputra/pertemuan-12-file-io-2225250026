@@ -16,6 +16,15 @@ python3 tugas/rekap_nilai_file.py
 - FileNotFoundError
 - ValueError
 ## Test Case
-Catat kondisi, hasil yang diharapkan, hasil aktual, dan status.
+### Test Case Wajib
+
+| Kasus | Kondisi | Hasil yang Diharapkan | Hasil Aktual | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| Normal | Semua baris valid | Semua record diproses dan rekap benar. | Semua record diproses dan rekap benar. | Pass |
+| File hilang | nilai.txt tidak tersedia | Pesan file tidak ditemukan; program tidak crash. | Pesan file tidak ditemukan; program tidak crash. | Pass |
+| Nilai invalid | A004,abc | Baris invalid dilewati/dilaporkan; record lain tetap diproses. | Baris invalid dilewati/dilaporkan; record lain tetap diproses. | Pass |
+| Baris kosong | Ada baris kosong | Baris kosong dilewati. | Baris kosong dilewati. | Pass |
+| Batas lulus | Nilai 60 | Dihitung sebagai lulus. | Dihitung sebagai lulus. | Pass |
+.
 ## Refleksi
-Jelaskan satu error yang ditemukan dan cara program menanganinya.
+Salah satu error yang ditemukan adalah file tidak ditemukan dan program menanganinya dengan blok try except.
